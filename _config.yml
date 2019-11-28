@@ -1,32 +1,17 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-title: Phantom
-email:
-description:
-baseurl: "/abffua" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
-
-# Logo settings
-logo-image-url: images/logo.svg
-font-awesome-icon-logo:
-
-# Social settings
-spotify: https://open.spotify.com/artist/1qW8TmeQl1S6oHdsOUCmVe
-twitter_username: esudejii
-bandcamp1: https://abetterfutureforusall.bandcamp.com/
-bandcamp2: https://sentdowngirl.bandcamp.com/
-instagram_username:
-500px_username:
-phone:
-
 # Build settings
-markdown: kramdown
 
-# Layout settings
-home-link-in-menu: yes
+markdown: kramdown
+permalink: none
+plugins:             [jekyll-sitemap, jekyll-feed,  jekyll-seo-tag]
+
+port: 4000
+
+sass:
+  sass_dir: assets/css
+  style: :nested
+
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+
+title:		           "Portfolio Jekyll Theme"
+description:	       "Powered by Jekyll and GitHub Pages"
+author:              "Paul Le"
