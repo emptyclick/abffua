@@ -1,14 +1,22 @@
 ---
 layout: default
 ---
-
-<section>
-  <div class="work-container">
-    <h4 class="project-title">{{ page.title }}</h4>
-    <div class="project-load">{{ content }}</div>
+<div class="post">
+  <div class="post-nav">
+    {% if page.next.url %}
+      <a class="nav-item" href="{{ page.next.url | prepend: site.baseurl }}">&laquo; Prev</a>
+    {% endif %}
+    {% if page.previous.url %}
+      <a class="nav-item" href="{{ page.previous.url | prepend: site.baseurl }}">Next &raquo;</a>
+    {% endif %}
   </div>
-  {% if site.data.settings.disqus.comments %}
-    {% include disqus.html %}
-  {% endif %}
-</section>
-{% include footer.html %}
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+</div>
